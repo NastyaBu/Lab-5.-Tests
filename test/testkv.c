@@ -54,5 +54,5 @@ CTEST(solution_of_quadratic_equations, the_coefficients_are_not_correct)
     double k1, k2;
     const int result = testkv(a, b, c, &k1, &k2);
    
-    ASSERT_EQUAL(INVALUD_ARGUMENTS, result);
+    ASSERT_EQUAL(INVALID_ARGUMENTS, result);
 }

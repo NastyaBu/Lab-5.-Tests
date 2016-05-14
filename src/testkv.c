@@ -1,19 +1,17 @@
 #include "testkv.h"
 
-int testkv()
-    float a = 0.0, b = 0.0, c = 0.0;
-    float d = 0.0;
-    float k1 = 0.0;
-    float k2 = 0.0;
+float testkv(float a, float b, float c, float *k1, float *k2)
+
 {
-    if ((a == 0) || ((a == 0)) || ((a == 0) && (b == 0) && (c == 0)))
+    if ((a == 0) || ((a == 0) && (b == 0)) || ((a == 0) && (b == 0) && (c == 0)))
     		return INVALID_ARGUMENTS;
     		
+    float d;
     d = b * b - 4 * a * c;
 
     if (d == 0)
     {
-        k1 = -b / (2 * a);
+        *k1 = -b / (2 * a);
         return FOUND_1_ROOT;
 	}
     
@@ -24,10 +22,10 @@ int testkv()
 
     if (d > 0)
     {
-    	k1 = (-b + sqrt(d)) / (2 * a);
-        k2 = (-b - sqrt(d)) / (2 * a);   	
+    	*k1 = (-b + sqrt(d)) / (2 * a);
+        *k2 = (-b - sqrt(d)) / (2 * a);   	
     		return FOUND_2_ROOT;
     }
 
-    return 0;
+//    return 0.0;
 }
