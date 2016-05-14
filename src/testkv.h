@@ -3,7 +3,7 @@
 #define FOUND_2_ROOT 2.0
 #define FOUND_1_ROOT 1.0
 #define ROOT_NOT_FOUND 0.0
-#define INVALID_ARGUMENTS -1.0 //111111
+#define INVALID_ARGUMENTS -1.0
 	
 float testkv(float a, float b, float c, float *k1, float *k2);
 

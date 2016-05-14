@@ -13,7 +13,7 @@ CTEST(solution_of_quadratic_equations, two_root)
 	const float expected_k1 = 3.0, expected_k2 = 0.5;
 	
 	ASSERT_DBL_NEAR(expected_k1, k1);
-    ASSERT_DBL_NEAR(expected_k2, k2);
+	ASSERT_DBL_NEAR(expected_k2, k2);
     ASSERT_EQUAL(FOUND_2_ROOT, result);
 }
 
