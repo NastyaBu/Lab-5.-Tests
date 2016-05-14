@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/NastyaBu/Lab-5.-Tests.svg?branch=master)](https://travis-ci.org/NastyaBu/Lab-5.-Tests)
