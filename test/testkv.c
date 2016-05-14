@@ -8,7 +8,7 @@ CTEST(solution_of_quadratic_equations, two_root)
 	const int c = 3;
    
     float k1, k2;
-	const int result = testkv(a, b, c, k1, k2);
+	const int result = testkv(a, b, c, &k1, &k2);
 	
 	const float expected_k1 = 3.0, expected_k2 = 0.5;
 	
@@ -24,7 +24,7 @@ CTEST(solution_of_quadratic_equations, one_root)
     const int c = 9;
 
     float k1, k2;
-    const int result = testkv(a, b, c, k1, k2);
+    const int result = testkv(a, b, c, &k1, &k2);
 
     const float expected_k1 = 1.5;
 
@@ -39,7 +39,7 @@ CTEST(solution_of_quadratic_equations, no_root)
     const int c = 9;
 
     float k1, k2;
-    const int result = testkv(a, b, c, k1, k2);
+    const int result = testkv(a, b, c, &k1, &k2);
 
     ASSERT_EQUAL(ROOT_NOT_FOUND, result);
 }
@@ -52,7 +52,7 @@ CTEST(solution_of_quadratic_equations, the_coefficients_are_not_correct)
     const int c = 9;
     
     double k1, k2;
-    const int result = testkv(a, b, c, k1, k2);
+    const int result = testkv(a, b, c, &k1, &k2);
    
     ASSERT_EQUAL(INVALUD_ARGUMENTS, result);
 }
